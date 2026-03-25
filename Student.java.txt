@@ -1,0 +1,17 @@
+class Student {
+    int id;
+    String name;
+    String major;
+    double gpa;
+
+    public Student(int id, String name, String major, double gpa) {
+        this.id = id;
+        this.name = name;
+        this.major = major;
+        this.gpa = gpa;
+    }
+
+    public void displayStudent() {
+        System.out.println("ID: " + id + ", Name: " + name + ", Major: " + major + ", GPA: " + gpa);
+    }
+}

@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Student> students = new ArrayList<>();
+
+        students.add(new Student(1, "John", "Computer Science", 3.8));
+        students.add(new Student(2, "Sara", "Math", 3.6));
+        students.add(new Student(3, "David", "Engineering", 3.9));
+
+        System.out.println("Student Records:");
+        for (Student s : students) {
+            s.displayStudent();
+        }
+
+        System.out.println("\nUpdating Sara's GPA...");
+        students.get(1).gpa = 3.7;
+
+        System.out.println("\nAfter Update:");
+        for (Student s : students) {
+            s.displayStudent();
+        }
+
+        System.out.println("\nRemoving John...");
+        students.remove(0);
+
+        System.out.println("\nAfter Removal:");
+        for (Student s : students) {
+            s.displayStudent();
+        }
+    }
+}
